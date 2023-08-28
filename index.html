@@ -308,17 +308,25 @@
         <code>
 Could you help me with generating speech? I am trying to select the most appropriate values of the following prosodic properties: duration, energy and pitch.
 
-given some target text and a target speaking style. Assume that all the speech is a part of a dialogue. Assume that I already have the speech for the target text but I can change the prosodic properties in a relative manner. I will give you:
+given some target text and a target speaking style. Assume that all the speech is a part of a dialogue. Assume that I already have the speech for the target 
+text but I can change the prosodic properties in a relative manner. I will give you:
 1. Either a previous line in the dialogue or a target speaking style
 2. The target text
 
 And I want to you tell me:
-1. How to change the pitch, energy and duration, in general, for the target text. We can increase or decrease these values as long as they don't go out of the range that is considered normal for the current speaker. So for each of those attributes, tell me how much to change them: (0: the standard value, -5: the minimum value, 5: the maximum value).A positive value for duration means a slower speaking rate, a negative value means a faster speaking rate. You should select these values appropriately given either the target style or the dialogue context. These values should not be used to emphasise specific words in the sentence.
+1. How to change the pitch, energy and duration, in general, for the target text. We can increase or decrease these values as long as they don't go out of 
+the range that is considered normal for the current speaker. So for each of those attributes, tell me how much to change them: (0: the standard value, 
+-5: the minimum value, 5: the maximum value).A positive value for duration means a slower speaking rate, a negative value means a faster speaking rate. 
+You should select these values appropriately given either the target style or the dialogue context. These values should not be used to emphasise specific 
+words in the sentence.
 
-2. How prominent each word on a scale from 0 to 5 (0: standard prominence, 5: maximum prominence). Note that this value should reflect on how salient the word is in the given sentence so most words should probably have a value of 0. Salient words should then have a value ranging from 1-5, considering how salient they are in the sentence.
+2. How prominent each word on a scale from 0 to 5 (0: standard prominence, 5: maximum prominence). Note that this value should reflect on how salient the 
+word is in the given sentence so most words should probably have a value of 0. Salient words should then have a value ranging from 1-5, considering 
+how salient they are in the sentence.
 
 Instructions:
-1. Report the sentence level change of pitch, energy and duration in a separate table. Pitch, energy and duration should be columns in the table. Pitch first, then energy and finally the duration
+1. Report the sentence level change of pitch, energy and duration in a separate table. Pitch, energy and duration should be columns in the table. 
+Pitch first, then energy and finally the duration
 2. Report the prominence level of each word in a separate table. Remove any punctuation as we do not have to predict prominence for those symbols.
 
 Here are templates for the two tables:
