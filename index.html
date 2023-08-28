@@ -340,7 +340,7 @@ Rules you must follow:
 4. Your choice of parameters and reasoning have to make sense. For example, you couldn't suggest a decrease but then motivate that choice by saying an increase is appropriate
 6. Make your suggestions independently of who it is that is speaking. The only thing that matters is that they are a native US speaker.
 
-<FEW SHOT EXAMPLES, SEE BACK PAGE>
+<FEW SHOT EXAMPLES, SEE BELOW>
 
 Please make suggestions for these inputs:
 1. Target style: Talking to a child
@@ -378,5 +378,228 @@ energy and duration to make the child feel loved and appreciated.
         </code>
     </pre>
 
+    <h2>Few-shot examples</h2>
+    <p>The following are the few-shot examples that we include in the prompt. No target speaking style nor target text used here are used further in our experiments.</p>
+
+    <h3>Prompt:</h3>
+    <pre>
+        <code>
+            # Few-shot examples
+Here are ten examples answers for this task:
+
+# example 1
+Target speaking style: Narration
+Target text: "The old woman walked through the door."
+
+These are the changes I would suggest:
+
+Pitch   Energy  Duration
+-1      -1      2
+
+Word    Prominence
+The     0
+old     0
+woman   0
+walked  0
+through 0
+the     0
+door    1
+
+Explanation:
+We make the overall duration slightly longer since that is fitting for narration. We lower the pitch and energy for a calm sounding voice which is fitting for this neutral target text. We make the word "door" prominent since it is the most important word in the sentence.
+
+
+# example 2
+Target speaking style: Inspirational speech
+Target text: "You can do it!"
+
+Here is how I would change the prosody:
+
+Pitch   Energy  Duration
+2       3       -2
+
+Word    Prominence
+You     1
+can     3
+do      0
+it      1
+
+Explanation:
+We make the overall duration shorter since the speaker is probably excited, given the target speaking style. We further raise the pitch and energy for a more excited sounding voice which is fitting for this target text. We add a low-level prominence to the words "You" and "it". The word "can" is the most important word in the sentence since the speaker is likely convincing the listener that they can do something.
+
+
+# example 3
+Target speaking style: Angry
+Target text: "I can't stand this anymore!"
+
+These are my suggestions:
+
+Pitch   Energy  Duration
+-1      2       -1
+
+Word    Prominence
+I       1
+can't   0
+stand   2
+this    2
+anymore 0
+
+
+Explanation:
+We lover the pitch and increase the energy to make the voice sound more angry. We slightly increase the speaking rate since this is probably something that is said in a heated argument. The word "I" is made slightly more prominent since the speaker is reflecting on their own feelings. The words "stand" and "this" are made more prominent since the speaker probably wants emphasize that they have had enough of something.
+
+
+# example 4
+Target speaking style: A college professor giving a lecture
+Target text: "The following example illustrates the point."
+
+This is what I would suggest:
+
+Pitch   Energy  Duration
+-1       0       2
+
+Word        Prominence
+The         0
+following   0
+example     0
+illustrates 2
+the         0
+point       1
+
+Explanation:
+We make the speaking rate slower since that helps the listener to follow along. A slightly lower pitch is fitting for this target speaking style. We only make the words "illustrates" and "point" slightly more prominent since they are directly involved in the point the speaker is trying to make.
+
+
+# example 5
+Target speaking style: A villain in a movie
+Target text: "Soon, this city will be mine!"
+
+These are my suggestions for this speaking style:
+
+Pitch   Energy  Duration
+-3      4       -2
+
+Word    Prominence
+Soon    0
+this    0
+city    0
+will    0
+be      0
+mine    4
+
+Explanation:
+A lower pitch and higher energy is fitting for a voice that is perceived as evil. We make the overall duration shorter to indicate excitement in the speaker's voice. We make the word "mine" much more prominent since it emphasizes the goal of the speaker.
+
+
+# example 6
+Target speaking style: A child
+Target text: "Can we have pizza for dinner?"
+
+My suggestions:
+
+Pitch   Energy  Duration
+2       0       2
+
+Word    Prominence
+Can     0
+we      0
+have    0
+pizza   2
+for     0
+dinner  0
+
+Explanation:
+We make the pitch higher and the speaking rate slower which would be appropriate for a child speaking. We emphasize the word "pizza" since it is likely the focus of the child's request.
+
+
+# example 7
+Target speaking style: An old man telling a story
+Target text: "In those days, we didn't have much."
+
+I would make the following adjustments:
+
+Pitch   Energy  Duration
+-1      -3      3
+
+Word    Prominence
+In      0
+those   0
+days    1
+we      0
+didn't  0
+have    0
+much    0
+
+Explanation:
+The energy and speaking rate is decreased to make the voice sound older. The pitch is slightly lowered since it is an old man. We only emphasize the word "days" slightly since the speaker is describing a particular time period.
+
+
+# example 8
+Target speaking style: A shy person
+Target text: "I'm not sure what they think of me."
+
+Here are my suggestions:
+
+Pitch   Energy  Duration
+-2      -2      2
+
+Word    Prominence
+I'm     0
+not     1
+sure    0
+what    0
+they    2
+think   0
+of      0
+me      1
+
+Explanation:
+We decrease pitch, energy and duration which would be appropriate for a less confident speaker. We add a small prominence value to the word "not" to indicate the negation. We then add prominence to the word "they" since the speaker is shy and probably worries about what other people think of them. We also add a low prominence value to the word "me" since the speaker is talking about themselves.
+
+
+# example 9
+Target speaking style: A child waking up on Christmas morning
+Target text: "Quick, let's go and open the presents!"
+
+I would make the following adjustments:
+
+Pitch   Energy  Duration
+2       3       -2
+
+Word    Prominence
+Quick   3
+let's   0
+go      0
+and     0
+open    0
+the     0
+presents 3
+
+Explanation:
+We increase pitch, energy and speaking rate since that would be fitting for the excitement that the child must be experiencing. We add high prominence values to the words "Quick" and "presents". The word "Quick" is prominent because it indicates the urgency of the situation. The word "presents" is prominent because it explains why the situation is exciting. 
+
+
+# example 10
+Target speaking style: A very tired person
+Target text: "We should probably go to bed."
+
+These are the changes I would make:
+
+Pitch   Energy  Duration
+-2      -4      3
+
+Word        Prominence
+We          0
+should      0
+probably    0
+go          0
+to          0
+bed         0
+
+Explanation:
+We decrease pitch, energy and speaking rate significantly since the speaker is probably speaking with very low effort. We don't add any particular prominence for this utterance since the tone of the voice should get the message across. 
+
+
+        </code>
 
 </html>
